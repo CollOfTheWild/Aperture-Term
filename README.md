@@ -5,7 +5,7 @@ Aperture-Term: The Cognition Dashboard 👁️
       / \
      / _ \      Aperture-Term TERMINAL v0.1
     | / \ |     [CONNECTED]
-    | \_/ |     System 2 Wrapper for Apple Silicon / MLX
+    | \_/ |     System 2 Wrapper for Llama.cpp
      \___/      
      
 Aperture-Term is a Textual-based TUI designed for the /r/UnixPorn generation. It is not just a chat client; it is a Cognition Flight Deck for steering 1B parameter models through complex reasoning tasks using asynchronous context injection and swarm voting.
@@ -112,25 +112,3 @@ j / k Scroll context lists or model lists.
 :load <model> Quick load command.
 
 :sleep Dump logs and shutdown.
-
-🚀 Build Instructions
-Bash
-
-# 1. Clone
-git clone https://github.com/CollOfTheWild/Aperture-Term.git
-
-# 2. Install Dependencies
-pip install textual[dev] rich huggingface_hub psutil mlx-lm
-
-# 3. Run Development Mode (Hot Reload)
-textual run --dev main.py
-Implementation Priority
-The Grid: Build the static Textual layout with placeholders.
-
-The Chat & Color: Implement the "Entropy Highlighter" (spacy or simple Regex for capitalized words) in the Input widget.
-
-Cuda is on the roadmap for whenever I can afford a 3090.
-
-The Monitor: Hook up psutil or gmux (for Mac GPU) to the bottom right bars.
-
-The Brain: Connect mlx-lm to the Chat and Loader panels.
