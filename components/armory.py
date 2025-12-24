@@ -38,6 +38,11 @@ class Armory(Static):
         background: $primary;
         color: $background;
     }
+    
+    .tab-btn.-primary {
+        background: $primary;
+        color: $background;
+    }
 
     #armory_status {
         align: center middle;
@@ -60,7 +65,8 @@ class Armory(Static):
     
     #armory_browser, #armory_library {
         layout: vertical;
-        overflow: hidden; 
+        overflow: hidden;
+        height: 1fr;
     }
     
     #browser_input {
@@ -79,6 +85,7 @@ class Armory(Static):
         min-height: 3;
         background: $surface;
         align-vertical: middle;
+        dock: bottom;
     }
 
     #download_progress {
@@ -149,6 +156,15 @@ class Armory(Static):
     def on_button_pressed(self, event: Button.Pressed) -> None:
         switcher = self.query_one(ContentSwitcher)
         
+        # Handle Tab Switching
+        if event.button.id in ["btn_status", "btn_browser", "btn_library"]:
+            # Reset all tabs
+            for btn_id in ["btn_status", "btn_browser", "btn_library"]:
+                self.query_one(f"#{btn_id}", Button).variant = "default"
+            
+            # Set active tab
+            event.button.variant = "primary"
+
         if event.button.id == "btn_status":
             switcher.current = "armory_status"
         elif event.button.id == "btn_browser":
