@@ -6,5 +6,6 @@ psutil>=6.0.0
 
 # Backend
 # Note: For CUDA support, install with: CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
-llama-cpp-python>=0.3.2
+#llama-cpp-python>=0.3.2
 numpy>=1.26.0
+huggingface_hub>=0.20.0

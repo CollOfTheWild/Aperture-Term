@@ -62,6 +62,11 @@ class ApertureTerm(App):
         yield Telemetry()
         yield Footer()
 
+    def on_flight_deck_search_request(self, message: FlightDeck.SearchRequest) -> None:
+        """Handle search requests from FlightDeck."""
+        swarm = self.query_one(ContextSwarm)
+        swarm.perform_search(message.query)
+
 if __name__ == "__main__":
     app = ApertureTerm()
     app.run()
