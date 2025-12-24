@@ -37,7 +37,7 @@ Aperture-Term uses a rigid, tiled grid layout optimized for 1080p+ terminal emul
 +---------------------------------------+---------------------------------------+
 ```
 [1] Top Left: The Armory (Model Loader)
-Hugging Face Browser: A scrollable list of models filtered by your Mac's hardware constraints (e.g., "Fits in 16GB").
+Hugging Face Browser: A scrollable list of models filtered by your device's hardware constraints (e.g., "Fits in 16GB", "CUDA", "MLX").
 
 Neofetch Cards: When a model loads, display a high-fidelity color ASCII logo of the lab (Meta, Mistral, Google, DeepSeek) alongside specs (Parameters, Quantization, Family).
 
@@ -89,7 +89,7 @@ Frontend: Python + Textual (CSS for TUI).
 
 Rendering: Rich (For ASCII art, markdown parsing, and syntax highlighting).
 
-Backend: MLX (Apple Silicon Native) or llama-cpp-python.
+Backend: MLX (Apple Silicon Native) or llama-cpp-python/cuda.
 
 Search: DuckDuckGo / Google Custom Search API.
 
