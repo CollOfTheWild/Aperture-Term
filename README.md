@@ -10,7 +10,7 @@ Aperture-Term: The Cognition Dashboard 👁️
      
 Aperture-Term is a Textual-based TUI designed for the /r/UnixPorn generation. It is not just a chat client; it is a Cognition Flight Deck for steering 1B parameter models through complex reasoning tasks using asynchronous context injection and swarm voting.
 
-It is designed to feel like htop met NeoVim inside a Cyberpunk novel.
+It is designed to feel like htop met Neofetch inside a Cyberpunk novel.
 
 🖥️ The Interface (The Grid)
 Aperture-Term uses a rigid, tiled grid layout optimized for 1080p+ terminal emulators (Alacritty, Kitty, iTerm2).
