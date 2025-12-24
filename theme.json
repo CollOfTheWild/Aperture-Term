@@ -1,0 +1,11 @@
+{
+    "theme": {
+        "name": "Wheatley",
+        "colors": {
+            "background": "#0f111a",
+            "primary": "#ffb86c",
+            "secondary": "#8be9fd",
+            "accent": "#ff5555"
+        }
+    }
+}

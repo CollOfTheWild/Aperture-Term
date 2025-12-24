@@ -1,0 +1,10 @@
+textual>=0.86.0
+rich>=13.7.0
+duckduckgo-search>=6.3.0
+nvidia-ml-py>=12.535.133  # Modern replacement for pynvml
+psutil>=6.0.0
+
+# Backend
+# Note: For CUDA support, install with: CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
+llama-cpp-python>=0.3.2
+numpy>=1.26.0
