@@ -18,7 +18,7 @@
 * **Language:** Python 3.10+
 * **Frontend (TUI):** `textual` (CSS-driven TUI framework), `rich` (Rendering).
 * **Backend (LLM):** `llama-cpp-python` (with CUDA/cuBLAS bindings).
-* **Tools:** `duckduckgo-search` (Web context), `pynvml` (NVIDIA stats), `psutil` (System stats).
+* **Tools:** `duckduckgo-search` (Web context), `nvidia-ml-py` (NVIDIA stats), `psutil` (System stats).
 
 ### File Structure (Strict Adherence)
 ```text
@@ -102,9 +102,9 @@ Error Handling: If the GPU runs OOM (Out of Memory), catch the exception gracefu
 Aesthetics: Use rich for coloring logs. Text should be Amber (#ffb86c) or Cyan (#8be9fd) depending on state (Thinking vs. Output).
 
 5. DEVELOPMENT SPRINT (Dec 24 - Dec 29)
-Phase 1: Skeleton & Layout (Get the boxes on screen).
+Phase 1: Skeleton & Layout (Get the boxes on screen). [COMPLETED]
 
-Phase 2: Telemetry & Search (Get the easy data flowing).
+Phase 2: Telemetry & Search (Get the easy data flowing). [IN PROGRESS]
 
 Phase 3: The LLM Backend (Threaded loading & inference).
 
