@@ -27,25 +27,25 @@ class ApertureTerm(App):
 
     Armory {
         row-span: 1;
-        col-span: 1;
+        column-span: 1;
         border: heavy $primary;
     }
 
     ContextSwarm {
         row-span: 1;
-        col-span: 1;
+        column-span: 1;
         border: heavy $secondary;
     }
 
     FlightDeck {
         row-span: 1;
-        col-span: 1;
+        column-span: 1;
         border: heavy $primary;
     }
 
     Telemetry {
         row-span: 1;
-        col-span: 1;
+        column-span: 1;
         border: heavy $secondary;
     }
     """
