@@ -50,6 +50,32 @@ def list_local_models():
         for f in files
     ]
 
-# Note: Actual downloading is a blocking long-running process.
-# In a real app, this should be handled by a separate worker/thread that reports progress.
-# For this MVP step, we will just define the function.
+def get_repo_ggufs(repo_id: str):
+    """
+    List .gguf files in a specific Hugging Face repository.
+    """
+    api = HfApi()
+    try:
+        files = api.list_repo_files(repo_id)
+        return [f for f in files if f.endswith(".gguf")]
+    except Exception as e:
+        print(f"Error listing repo files: {e}")
+        return []
+
+def download_model(repo_id: str, filename: str, progress_callback=None):
+    """
+    Download a specific GGUF file from HF.
+    """
+    ensure_model_dir()
+    try:
+        # hf_hub_download handles caching and partial downloads
+        path = hf_hub_download(
+            repo_id=repo_id,
+            filename=filename,
+            local_dir=MODEL_DIR,
+            local_dir_use_symlinks=False
+        )
+        return path
+    except Exception as e:
+        print(f"Download Error: {e}")
+        return None
